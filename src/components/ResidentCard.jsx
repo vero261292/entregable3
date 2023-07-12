@@ -1,10 +1,14 @@
 import axios from "axios";
 import { useEffect } from "react";
-import { useState } from "react";
 import "./styles/ResidentCard.css";
+import useFetch from "../hooks/useFetch";
 
 const ResidentCard = ({ url }) => {
-  const [character, setCharacter] = useState();
+
+  const [ character, getSingleCharacter,] = useFetch(url)
+
+
+  
 
   useEffect(() => {
     axios

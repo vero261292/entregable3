@@ -1,40 +1,25 @@
 
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 import getRandomNumber from './utils/getRandomNumber.js'
 import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import FormLocation from './components/FormLocation'
-
 import './App.css'
+import useFetch from './hooks/useFetch.js'
 
 
 
 
 function App() {
 
-  const [location, setLocation ] = useState ()
   const [idLocation, setIdLocation] = useState (getRandomNumber(126))
-  const [hasError, setHasError] = useState(false)
-  const [isloading, setIsloading] = useState(true)
- 
-  useEffect (() => {
 
-    const url = `https://rickandmortyapi.com/api/location/${idLocation}`
-    setIsloading(true)
-    axios
-    .get(url)
-    .then(res => {
-      setLocation(res.data)
-      setHasError(false)
-    } )
-    .catch(err => {
-       console.error(err)
-       setHasError(true)
-    } )
-    .finally(()=> {
-      setIsloading(false)
-    })
+  const url = `https://rickandmortyapi.com/api/location/${idLocation}`
+  const [ location, getSingleLocation, hasError, isLoading] = useFetch(url)
+
+
+  useEffect(() => {
+  getSingleLocation()
 
   }, [idLocation]);
   
@@ -47,7 +32,7 @@ function App() {
         setIdLocation={setIdLocation}
       />
       {
-        isloading
+        isLoading
           ? (<h2>Loading ...🫣</h2>)
           : (
             hasError
@@ -78,6 +63,8 @@ function App() {
 }
 
 export default App
+
+
 
 
 
