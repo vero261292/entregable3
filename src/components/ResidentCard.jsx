@@ -1,35 +1,24 @@
-import axios from "axios";
 import { useEffect } from "react";
 import "./styles/ResidentCard.css";
 import useFetch from "../hooks/useFetch";
 
 const ResidentCard = ({ url }) => {
-
-  const [ character, getSingleCharacter,] = useFetch(url)
-
-
-  
+  const [character, getSingleCharacter] = useFetch(url);
 
   useEffect(() => {
-    axios
-      .get(url)
-      .then((res) => setCharacter(res.data))
-      .catch((err) => console.log(err));
-  }, []);
-  
-  console.log(character);
+    getSingleCharacter();
+  });
 
   return (
-    
     <article className="resident">
       <header className="resident__header">
         <img className="resident__image" src={character?.image} alt="" />
         <div className="resident__status">
-          <div className={`resident__status-circle ${character?.status}` }></div>
+          <div className={`resident__status-circle ${character?.status}`}></div>
           <span className="resident__status-value">{character?.status}</span>
         </div>
-      </header> 
-      <section className="resident__body"> 
+      </header>
+      <section className="resident__body">
         <h3 className="resident__name">{character?.name}</h3>
         <hr className="resident__line" />
         <ul className="resident__list">
@@ -44,7 +33,7 @@ const ResidentCard = ({ url }) => {
             </span>
           </li>
           <li className="resident__item">
-            <span className="resident__label">Eppisodes where appear</span>
+            <span className="resident__label">Episodes where appear</span>
             <span className="resident__item-value">
               {character?.episode.length}
             </span>
@@ -52,10 +41,7 @@ const ResidentCard = ({ url }) => {
         </ul>
       </section>
     </article>
-   
-  
-  ); 
+  );
 };
 
 export default ResidentCard;
-

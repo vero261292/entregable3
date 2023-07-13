@@ -1,48 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap');
 
-font-family: 'Lato', sans-serif;
+
 
 
 :root {
     --bg-card: #1A262A;
-    --color-pink: pink;
+    --color-pink: green;
 }
 
 
-
-* {   
+* {
     box-sizing: border-box;
-}
-
-
-html {
-    font-family: 'Lato', 
-}
-
-
-body{
+  }
+  
+  html {
+    font-family: "Lato", sans-serif;
     margin: 0;
-}
-
-h1, h2, h3, p, ul, hr {
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  body {
     margin: 0;
+    background-color: var(--background-primary);
+  }
+  
+  h1,
+  h2,
+  h3,
+  p,
+  ul,
+  hr {
+    margin-top: 0;
     margin-bottom: 0;
-}
-
-ul {
+  }
+  
+  ul {
     list-style: none;
     padding-left: 0;
-}
-
-input, button {
+  }
+  
+  input {
     font-family: inherit;
     border: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-img{
+  }
+  
+  img {
     display: block;
-}
+  }
+  
+  button {
+    cursor: pointer;
+  }
+
+
+
+

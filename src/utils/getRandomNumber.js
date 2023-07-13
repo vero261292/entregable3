@@ -1,7 +1,7 @@
 
 
-const getRandomNumber = (limit) => {
-    return Math.floor(Math.random() * limit + 1)
+const getRandomNumber = () => {
+    return Math.floor(Math.random() * 126) + 1
 
 }
 

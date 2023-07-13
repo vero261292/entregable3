@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState } from "react"
 
 
-const useFetch = () => {
+const useFetch = (url) => {
 
 
     const [ infoApi, setInfoApi] = useState()
@@ -13,7 +13,7 @@ const useFetch = () => {
     const getApi = () => {
         setIsLoading(true)
         axios
-        .get()
+        .get(url)
         .then(res => {
             setInfoApi(res.data)
             setHasError(false)

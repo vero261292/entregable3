@@ -21,13 +21,13 @@ function App() {
   useEffect(() => {
   getSingleLocation()
 
-  }, [idLocation]);
+  }, [idLocation])
   
   
 
   return (
     <div>
-      <h1>RICK AND MORTY APP</h1>
+      <h1></h1>
       <FormLocation
         setIdLocation={setIdLocation}
       />
