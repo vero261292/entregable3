@@ -1,6 +1,6 @@
 .resident {
     background-color: var(--bg-card);
-    color: var(--text-color);
+    color: white;
     width: 100%;
     max-width: 250px;
     border-radius: 0.8em;
@@ -21,6 +21,7 @@
     width: 100%;
   }
   
+
   .resident__status {
     width: max-content;
     background-color: var(--bg-card);
@@ -85,3 +86,4 @@
   .resident__item-value {
     padding-left: 1em;
   }
+  

@@ -4,7 +4,7 @@
 
 
 :root {
-    --bg-card: #1A262A;
+    --bg-card: #072226;
     --color-pink: green;
 }
 
@@ -22,7 +22,7 @@
   
   body {
     margin: 0;
-    background-color: var(--background-primary);
+    background-color: #05292E;
   }
   
   h1,

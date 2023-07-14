@@ -5,18 +5,26 @@ const FormLocation = ({ setIdLocation }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const inputValue = e.target.inputId.value.trim();
-    if (inputValue !== "" || inputValue === "0") {
+    if (inputValue === "" || inputValue === "0") {
       setIdLocation(getRandomNumber(126));
     } else {
-      setIdLocation(getRandomNumber(126));
+      setIdLocation(inputValue);
     }
     e.target.inputId.value = "";
   };
 
   return (
     <form onSubmit={handleSubmit} className="form-location">
-      <input className="form-location__input" id="inputId" style={{ boxShadow: "1px 1px 10px" }} type="text" />
-      <button className="form-location__button" style={{ backgroundColor: "green", color: "white" }}>
+      <input
+        className="form-location__input"
+        id="inputId"
+        style={{ boxShadow: "1px 1px 10px" }}
+        type="text"
+      />
+      <button
+        className="form-location__button"
+        style={{ backgroundColor: "green", color: "white" }}
+      >
         Search
       </button>
     </form>

@@ -9,3 +9,24 @@
 input, button {
     font-size: 1.5rem;
 }
+
+.header{
+    background-image: url('../public/WallpaperFusion-rick-and-morty-1680x480.jpg');
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 1em;
+
+}
+
+@media (max-width:768px){
+    .header{
+        background-image: url('../public/WallpaperFusion-rick-and-morty-1680x480.jpg');
+        height: 100px; 
+        background-size: cover; 
+    }
+}
+
+
+
