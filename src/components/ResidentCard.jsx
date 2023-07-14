@@ -7,7 +7,7 @@ const ResidentCard = ({ url }) => {
 
   useEffect(() => {
     getSingleCharacter();
-  });
+  }, []);
 
   return (
     <article className="resident">
